@@ -33,10 +33,21 @@ public class CalcScore {
 				break;
 			case 3:
 				for(int i = 0; i < score.length;i++) {
-					System.out.print("scores[" + i + "] = " + score[i]);
-					score[i] = sc.nextInt();
+					System.out.print("scores[" + i + "] = " + score[i]);1
 				}
 				break;
+			case 4:
+				if(score != null) {
+					int sum = 0;
+					double avg;
+					for(int i = 0; i < score.length;i++) {
+						sum += score[i];
+					}
+					avg = (double)sum / score.length;
+					System.out.println("평균 점수: " + avg);
+					break;
+					
+				}
 				
 			case 5:
 				System.out.println("프로그램을 종료합니다.");
