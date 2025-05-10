@@ -3,23 +3,25 @@ package salestatement;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		drink coffee = new drink("커피",2500,4);
-		drink tea = new drink("녹차",3500,3);
-		Alcohol soju = new Alcohol("소주",4000,2,15.2f);
+		// 객체 생성
+		Drink coffee = new Drink("커피", 2500, 4);
+		Drink tea = new Drink("녹차", 3500, 3);
+		Alcohol soju = new Alcohol("소주", 4000, 2, 15.2F);
 		
-		//매출전표 출력
-		drink.printTitle();//static 매서드는 직접 접근한다.
+		
+		//음료 매출전표 출력
+		Drink.printTitle();;
 		coffee.printData();
 		tea.printData();
 		
-		Alcohol.printTitle();//static 매서드는 직접 접근
+		//알콜 매출 전표 출력
+		Alcohol.printTitle();
 		soju.printData();
 		
 		//총합계 금액
 		int total = 0;
 		total = coffee.calcPrice() + tea.calcPrice() + soju.calcPrice();
-		System.out.println("********* 합계 금액: " + total + "원 ******");
+		System.out.println("********** 합계 금액: " + total + "원 **********");
 
 	}
 

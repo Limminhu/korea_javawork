@@ -1,10 +1,10 @@
 package inheritance;
 
-public class taxiTest {
+public class TaxiTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Taxi taxi = new Taxi("카카오",2020,2);
+		// Taxi 객체 생성
+		Taxi taxi = new Taxi("카카오T", 2020, 2);
 		taxi.carInfo();
 
 	}

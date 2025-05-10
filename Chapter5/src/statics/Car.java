@@ -1,16 +1,23 @@
 package statics;
 
 public class Car {
-	private static int serialNum = 1000;//접근제어자 뒤에 static을 붙이면 값을 공유할 수 있다.
-  private int carNum;//신차 번호
-  
-  public Car() {
-	  serialNum++;
-	  carNum = serialNum;
-  }
-  //번호 설정
-  public void setCarNum(int carNum) {this.carNum = carNum;}
-  //번호 가져오기
-  public int getCarNum() {return carNum;}
-  
+	//static이 붙은 변수(정적 변수)는 값을 공유 및 유지한다.
+	private static int serialNum = 1000;
+	private int  carNumber;   //신차 번호
+	
+	public Car() {
+		serialNum++;  //번호 1 증가
+		carNumber = serialNum;
+	}
+	
+	public void setCarNumber(int carNumber) {
+		this.carNumber = carNumber;
+	}
+	
+	//번호 가져오기
+	public int getCarNumber() {
+		return carNumber;
+	}
 }
+
+
